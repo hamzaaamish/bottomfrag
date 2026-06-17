@@ -14,7 +14,7 @@
 const CONFIG = {
   storeName:    "bottomfrag",
   tagline:      "cool finds, best price",
-  ownerEmail:   "hamzaaamishh@gmail.com",
+  ownerEmail:   "hamzaizded@gmail.com",
   formspreeURL: "https://formspree.io/f/mjgddbdw1",
   currency:     "₹",
   heroImage:    "https://i.ibb.co/TxJfG4dB/black-friday-elements-assortment.jpg",
@@ -26,23 +26,23 @@ const CONFIG = {
 const PRODUCTS = [
   {
     id: 1,
-    name: "Skull TWS Earbuds",
-    price: 799,
+    name: "SkullCandy Earbuds",
+    price: 1999,
     category: "Audio",
     description: "Compact true wireless earbuds in a smoked-transparent charging case dressed up with skull stickers — because your audio setup should have personality too. Touch controls, snug in-ear fit, and enough battery to get you through the grind. Pairs fast, sounds punchy. Built for those who don't do boring.",
     images: [
-      "https://i.ibb.co/HDzhn6D5/20260614-191701.jpg",
+      "https://i.ibb.co/hxwfLmQR/20260614-192651.jpg",
     ],
     stock: 15,
   },
   {
     id: 2,
-    name: "Play With Power Wireless Controller",
-    price: 1799,
+    name: "Evofox Wireless Controller",
+    price: 2299,
     category: "Gaming",
     description: "White and black dual-grip wireless gamepad with dual analog sticks, a crisp D-pad, X/Y/A/B face buttons, shoulder triggers, and Select/Start/Home — everything a controller needs and nothing it doesn't. Compatible with PC, Android, and most modern platforms. The motto says 'Play With Power' and it means it. Rubber grips keep it locked in your hands during the sweatiest sessions.",
     images: [
-      "https://i.ibb.co/j9tnF5TY/20260614-191755.jpg",
+      "https://i.ibb.co/HDzhn6D5/20260614-191701.jpg",
     ],
     stock: 5,
   },
@@ -60,11 +60,11 @@ const PRODUCTS = [
   {
     id: 4,
     name: "Logitech G102 Gaming Mouse",
-    price: 1299,
+    price: 2099,
     category: "Gaming",
     description: "The legendary Logitech G102 in clean white — the mouse that pros swear by and beginners graduate to. 8000 DPI optical sensor, 6 programmable buttons, and a sculpted symmetric shell that works for claw and palm grip alike. Braided cable, zero drag, weighs almost nothing. This is what precision feels like.",
     images: [
-      "https://i.ibb.co/hxwfLmQR/20260614-192651.jpg",
+      "https://i.ibb.co/6JRLM24m/20260614-191918.jpg",
     ],
     stock: 8,
   },
