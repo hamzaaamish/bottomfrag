@@ -15,7 +15,7 @@ const CONFIG = {
   storeName:    "bottomfrag",
   tagline:      "cool finds, best price",
   ownerEmail:   "hamzaizded@gmail.com",
-  formspreeURL: "https://formspree.io/f/mjgddbdw1",
+  formspreeURL: "https://formspree.io/f/mjgddbdw",
   currency:     "₹",
   heroImage:    "https://i.ibb.co/TxJfG4dB/black-friday-elements-assortment.jpg",
 };
