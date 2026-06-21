@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -31,84 +31,82 @@ const PRODUCTS = [
     originalPrice: 2499,
     category: "Audio",
     description: "Compact true wireless earbuds in a smoked-transparent charging case dressed up with skull stickers — because your audio setup should have personality too. Touch controls, snug in-ear fit, and enough battery to get you through the grind. Pairs fast, sounds punchy. Built for those who don't do boring.",
-    specs: {
-      "Brand": "SkullCandy",
-      "Connectivity": "Bluetooth 5.0",
-      "Battery Life": "6 hrs (earbuds) + 20 hrs (case)",
-      "Charging": "USB-C",
-      "Water Resistance": "IPX4",
-      "Warranty": "6 months",
-    },
     images: [
       "https://i.ibb.co/hxwfLmQR/20260614-192651.jpg",
     ],
     stock: 15,
     rating: 4.5,
     reviewCount: 128,
+    specs: {
+      "Connectivity": "Bluetooth 5.2",
+      "Battery Life": "20 hrs (with case)",
+      "Charging": "USB-C",
+      "Water Resistance": "IPX4",
+      "Weight": "4.5g per bud",
+    },
   },
   {
     id: 2,
     name: "Evofox Wireless Controller",
     price: 2299,
+    originalPrice: 2799,
     category: "Gaming",
     description: "White and black dual-grip wireless gamepad with dual analog sticks, a crisp D-pad, X/Y/A/B face buttons, shoulder triggers, and Select/Start/Home — everything a controller needs and nothing it doesn't. Compatible with PC, Android, and most modern platforms. The motto says 'Play With Power' and it means it. Rubber grips keep it locked in your hands during the sweatiest sessions.",
-    specs: {
-      "Brand": "Evofox",
-      "Connectivity": "2.4GHz Wireless + Wired USB",
-      "Compatibility": "PC / Android",
-      "Battery Life": "Up to 8 hrs",
-      "Vibration": "Dual motor",
-      "Warranty": "1 year",
-    },
     images: [
       "https://i.ibb.co/HDzhn6D5/20260614-191701.jpg",
     ],
     stock: 5,
     rating: 4.2,
     reviewCount: 64,
+    specs: {
+      "Connectivity": "Wireless 2.4GHz + Bluetooth",
+      "Battery Life": "15 hrs",
+      "Charging": "USB-C",
+      "Compatibility": "PC, Android",
+      "Weight": "210g",
+    },
   },
   {
     id: 3,
     name: "Kreo Dynamic Podcast Mic",
     price: 3499,
-    originalPrice: 3999,
+    originalPrice: 4299,
     category: "Audio",
     description: "A proper broadcast-style dynamic microphone by Kreo, built for streamers, podcasters, and anyone done tolerating bad audio. Foam-tipped windscreen kills plosives dead. Comes on a sturdy yoke mount, plugs straight into your setup, and looks incredible on camera. Matte black finish, zero-compromise sound. No excuses for muddy audio anymore.",
-    specs: {
-      "Brand": "Kreo",
-      "Type": "Dynamic",
-      "Polar Pattern": "Cardioid",
-      "Connectivity": "USB",
-      "Mount": "Yoke mount included",
-      "Warranty": "1 year",
-    },
     images: [
       "https://i.ibb.co/JWvrmQJR/Kast-b3.png",
     ],
     stock: 6,
     rating: 4.8,
     reviewCount: 211,
+    specs: {
+      "Microphone Type": "Dynamic, Cardioid",
+      "Connectivity": "USB / XLR",
+      "Frequency Response": "50Hz – 16kHz",
+      "Mount": "Yoke + boom-arm compatible",
+      "Material": "Matte black aluminium",
+    },
   },
   {
     id: 4,
     name: "Logitech G102 Gaming Mouse",
     price: 2099,
+    originalPrice: 2499,
     category: "Gaming",
     description: "The legendary Logitech G102 in clean white — the mouse that pros swear by and beginners graduate to. 8000 DPI optical sensor, 6 programmable buttons, and a sculpted symmetric shell that works for claw and palm grip alike. Braided cable, zero drag, weighs almost nothing. This is what precision feels like.",
-    specs: {
-      "Brand": "Logitech",
-      "Sensor": "8000 DPI optical",
-      "Buttons": "6 programmable",
-      "Connectivity": "Wired USB",
-      "Cable": "Braided",
-      "Warranty": "2 years",
-    },
     images: [
       "https://i.ibb.co/6JRLM24m/20260614-191918.jpg",
     ],
     stock: 8,
     rating: 4.6,
     reviewCount: 342,
+    specs: {
+      "Sensor": "8000 DPI optical",
+      "Buttons": "6 programmable",
+      "Connectivity": "Wired (braided cable)",
+      "Grip Style": "Symmetric, claw/palm",
+      "Weight": "85g",
+    },
   },
   {
     id: 5,
@@ -117,20 +115,19 @@ const PRODUCTS = [
     originalPrice: 3499,
     category: "Peripherals",
     description: "A compact 75% mechanical keyboard built for those who type with taste. Vivid periwinkle blue modifiers — Ctrl, Shift, Alt, Fn, Enter, Space — pop against slate grey alphanumerics on a jet black base. Full F-row, Mac/Win toggle switch, Fn-layer media controls, and RGB backlight. Satisfying tactile switches, solid build quality, and a colorway that looks like it costs twice as much. Whether you're deep in a ranked session or grinding through assignments at 2 AM, this board makes every keystroke feel intentional.",
-    specs: {
-      "Layout": "75% (Compact)",
-      "Switches": "Mechanical tactile",
-      "Backlight": "RGB",
-      "Connectivity": "Wired USB",
-      "OS Compatibility": "Windows / Mac toggle",
-      "Warranty": "1 year",
-    },
     images: [
       "https://i.ibb.co/wFsR1qwQ/20260614-191755.jpg",
     ],
     stock: 3,
     rating: 4.9,
     reviewCount: 87,
+    specs: {
+      "Layout": "75% (compact, full F-row)",
+      "Switch Type": "Mechanical, tactile",
+      "Connectivity": "Wired + Bluetooth",
+      "Backlight": "RGB",
+      "Compatibility": "Win / Mac toggle",
+    },
   },
 ];
 
@@ -158,6 +155,7 @@ const CAROUSEL_IMAGES = [
   --card-bg:   #FDFAF4;
   --border:    #E2DBCF;
   --star:      #D9A23B;
+  --sale:      #B5454A;
 
   --ff-head:   'Playfair Display', Georgia, serif;
   --ff-body:   'DM Sans', system-ui, sans-serif;
@@ -178,6 +176,7 @@ html[data-theme="dark"] {
   --card-bg:   #1F1C16;
   --border:    #332E24;
   --star:      #E8B448;
+  --sale:      #E5666B;
 }
 
 html { scroll-behavior: smooth; }
@@ -305,31 +304,56 @@ html[data-theme="dark"] #logo { color: #ECE6DA; }
 }
 #cart-count.visible { display: flex; }
 
+/* Wishlist nav button */
 #wishlist-btn {
   position: relative;
-  background: transparent;
+  background: rgba(255,255,255,.08);
+  border: 1.5px solid rgba(255,255,255,.12);
   color: #fff;
-  border: 1.5px solid var(--rose);
-  border-radius: 50px;
-  padding: 8px 18px;
-  font-size: .85rem;
-  font-weight: 600;
-  letter-spacing: .04em;
-  transition: background var(--trans);
-  display: flex; align-items: center; gap: 8px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  transition: all var(--trans);
 }
-#wishlist-btn:hover { background: rgba(212,160,160,.18); }
+#wishlist-btn:hover { background: rgba(255,255,255,.16); }
+#wishlist-btn.has-items { color: #e0566a; }
 #wishlist-count {
-  background: var(--rose);
+  position: absolute;
+  top: -4px; right: -4px;
+  background: var(--amber);
   color: #fff;
   border-radius: 50%;
-  width: 20px; height: 20px;
-  font-size: .7rem;
+  width: 16px; height: 16px;
+  font-size: .62rem;
   font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
   display: none;
+  align-items: center; justify-content: center;
 }
 #wishlist-count.visible { display: flex; }
+
+/* Wishlist heart toggle on product cards/page */
+.wish-btn {
+  background: rgba(255,255,255,.85);
+  border-radius: 50%;
+  width: 34px; height: 34px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  transition: all var(--trans);
+  flex-shrink: 0;
+}
+.wish-btn:hover { transform: scale(1.1); }
+.wish-btn.active { color: #e0566a; }
+.card-img-wrap .wish-btn {
+  position: absolute; bottom: 10px; right: 10px;
+  z-index: 2;
+}
+.product-info .wish-btn {
+  width: 42px; height: 42px;
+  font-size: 1.2rem;
+  border: 1.5px solid var(--border);
+  background: var(--card-bg);
+}
 
 /* ── Pages ──────────────────────────────────────────────── */
 .page { display: none; }
@@ -526,13 +550,8 @@ html[data-theme="dark"] #carousel-section { background: #0F0D0A; }
   transition: transform .5s ease;
 }
 .product-card:hover .card-img-wrap img { transform: scale(1.06); }
-.card-badges-top {
-  position: absolute; top: 12px; left: 12px;
-  z-index: 2;
-  display: flex; flex-direction: column; gap: 6px;
-  align-items: flex-start;
-}
 .card-badge {
+  position: absolute; top: 12px; left: 12px;
   background: var(--charcoal);
   color: var(--bg);
   font-size: .68rem;
@@ -541,21 +560,10 @@ html[data-theme="dark"] #carousel-section { background: #0F0D0A; }
   text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 50px;
-  white-space: nowrap;
-}
-.sale-badge {
-  background: #B5454A;
-  color: #fff;
-  font-size: .68rem;
-  font-weight: 700;
-  letter-spacing: .06em;
-  text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 50px;
-  white-space: nowrap;
 }
 .stock-out-badge {
-  background: #6b6258;
+  position: absolute; top: 12px; right: 12px;
+  background: #B5454A;
   color: #fff;
   font-size: .68rem;
   font-weight: 600;
@@ -563,24 +571,43 @@ html[data-theme="dark"] #carousel-section { background: #0F0D0A; }
   text-transform: uppercase;
   padding: 4px 10px;
   border-radius: 50px;
-  white-space: nowrap;
 }
-.card-icon-actions {
+.sale-badge {
   position: absolute; top: 12px; right: 12px;
-  z-index: 2;
-  display: flex; flex-direction: column; gap: 8px;
-}
-.icon-btn {
-  width: 32px; height: 32px;
-  border-radius: 50%;
-  background: rgba(26,26,26,.55);
+  background: var(--sale);
   color: #fff;
-  font-size: .92rem;
-  display: flex; align-items: center; justify-content: center;
-  transition: background var(--trans), transform var(--trans);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 50px;
 }
-.icon-btn:hover { background: rgba(26,26,26,.85); transform: scale(1.08); }
-.icon-btn.active { background: var(--rose); }
+/* When both sale + sold-out badges would collide, stack sale below sold-out */
+.stock-out-badge ~ .sale-badge,
+.sale-badge ~ .stock-out-badge {
+  top: 42px;
+}
+.price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-bottom: 14px;
+  margin-top: auto;
+}
+.price-original {
+  font-size: .85rem;
+  color: var(--muted);
+  text-decoration: line-through;
+}
+.price-discount-pct {
+  font-size: .72rem;
+  font-weight: 700;
+  color: var(--sale);
+  background: rgba(181,69,74,.1);
+  padding: 2px 7px;
+  border-radius: 50px;
+}
 .card-body { padding: 16px 18px 20px; flex: 1; display: flex; flex-direction: column; }
 .card-cat {
   font-size: .72rem;
@@ -628,28 +655,10 @@ html[data-theme="dark"] #carousel-section { background: #0F0D0A; }
   color: var(--muted);
 }
 
-.price-row {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 14px;
-  margin-top: auto;
-}
 .card-price {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--amber-dk);
-}
-.price-original {
-  font-size: .85rem;
-  color: var(--muted);
-  text-decoration: line-through;
-}
-.discount-pct {
-  font-size: .78rem;
-  font-weight: 700;
-  color: #B5454A;
 }
 .btn-cart {
   width: 100%;
@@ -708,31 +717,11 @@ html[data-theme="dark"] #carousel-section { background: #0F0D0A; }
 .product-info .rating-row { margin-bottom: 16px; }
 .product-info .stars { font-size: 1rem; }
 .product-info .product-price {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--amber-dk);
   margin-bottom: 20px;
 }
-.product-info .product-price .card-price {
-  font-size: 1.6rem;
-}
-.product-info .product-price .price-original {
-  font-size: 1rem;
-}
-.product-info .product-price .discount-pct {
-  font-size: .9rem;
-}
-.product-info .wishlist-toggle,
-.qv-info .wishlist-toggle {
-  width: 44px; height: 44px;
-  font-size: 1.1rem;
-  background: var(--card-bg);
-  border: 1.5px solid var(--border);
-  flex-shrink: 0;
-}
-.product-info .wishlist-toggle:hover,
-.qv-info .wishlist-toggle:hover { background: var(--border); transform: none; }
-.product-info .wishlist-toggle.active,
-.qv-info .wishlist-toggle.active { background: var(--rose); border-color: var(--rose); }
-.cta-row { display: flex; gap: 10px; align-items: stretch; margin-bottom: 10px; }
-.cta-row .btn-add-full { flex: 1; margin-bottom: 0; }
 .product-desc {
   color: #555;
   line-height: 1.75;
@@ -741,29 +730,32 @@ html[data-theme="dark"] #carousel-section { background: #0F0D0A; }
 }
 html[data-theme="dark"] .product-desc { color: #B8AF9F; }
 
-.specs-block { margin: 0 0 28px; }
-.specs-title {
-  font-family: var(--ff-head);
-  font-size: 1.05rem;
-  margin-bottom: 12px;
-}
 .specs-table {
+  width: 100%;
+  margin-bottom: 28px;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: var(--r);
   overflow: hidden;
 }
-.spec-row {
+.specs-table-title {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+.specs-row {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
-  padding: 10px 16px;
-  font-size: .87rem;
+  padding: 11px 16px;
+  font-size: .88rem;
   border-bottom: 1px solid var(--border);
+  background: var(--card-bg);
 }
-.spec-row:last-child { border-bottom: none; }
-.spec-row:nth-child(even) { background: var(--bg); }
-.spec-key { color: var(--muted); font-weight: 600; flex-shrink: 0; }
-.spec-val { color: var(--charcoal); text-align: right; }
+.specs-row:last-child { border-bottom: none; }
+.specs-row .spec-key { color: var(--muted); font-weight: 500; }
+.specs-row .spec-val { color: var(--charcoal); font-weight: 600; text-align: right; }
 .stock-badge {
   display: inline-block;
   padding: 4px 12px;
@@ -837,8 +829,21 @@ html[data-theme="dark"] .stock-badge.out { background: rgba(181,69,74,.18); }
   gap: 20px;
 }
 
+.wishlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+.wishlist-empty {
+  text-align: center;
+  padding: 80px 0;
+  color: var(--muted);
+}
+.wishlist-empty h2 { font-family: var(--ff-head); font-size: 1.8rem; margin-bottom: 10px; color: var(--charcoal); }
+
 /* ── Cart page ──────────────────────────────────────────── */
 #cart-page .section { max-width: 860px; margin: 0 auto; }
+#wishlist-page .section { max-width: 860px; margin: 0 auto; }
 .cart-empty {
   text-align: center;
   padding: 80px 0;
@@ -1022,99 +1027,103 @@ html[data-theme="dark"] .stock-badge.out { background: rgba(181,69,74,.18); }
 .success-box h2 { font-family: var(--ff-head); font-size: 1.8rem; margin-bottom: 10px; }
 .success-box p { color: var(--muted); line-height: 1.6; }
 
-/* ── Quick View modal ───────────────────────────────────── */
-#quickview-modal {
+/* ── Quick View modal ─────────────────────────────────────── */
+#quickview-overlay {
   display: none;
   position: fixed; inset: 0; z-index: 998;
-  background: rgba(26,26,26,.65);
-  backdrop-filter: blur(6px);
+  background: rgba(26,26,26,.6);
+  backdrop-filter: blur(4px);
   align-items: center; justify-content: center;
-  padding: 24px;
+  padding: 20px;
 }
-#quickview-modal.show { display: flex; }
+#quickview-overlay.show { display: flex; }
 .qv-box {
   background: var(--card-bg);
   border-radius: 16px;
-  max-width: 760px;
+  max-width: 720px;
   width: 100%;
-  max-height: 90vh;
+  max-height: 88vh;
   overflow-y: auto;
+  box-shadow: 0 30px 70px rgba(0,0,0,.3);
   position: relative;
-  box-shadow: 0 24px 60px rgba(0,0,0,.3);
 }
 .qv-close {
   position: absolute; top: 14px; right: 14px;
-  width: 34px; height: 34px;
+  background: var(--charcoal);
+  color: var(--bg);
+  width: 32px; height: 32px;
   border-radius: 50%;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  color: var(--charcoal);
-  font-size: 1rem;
   display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
   z-index: 3;
-  transition: background var(--trans);
 }
-.qv-close:hover { background: var(--border); }
 .qv-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
 }
-@media(max-width:620px){ .qv-layout { grid-template-columns: 1fr; } }
+@media(max-width:600px){ .qv-layout { grid-template-columns: 1fr; } }
 .qv-img-wrap {
-  aspect-ratio: 3/4;
-  overflow: hidden;
+  aspect-ratio: 1/1;
   background: var(--border);
+  overflow: hidden;
   border-radius: 16px 0 0 16px;
+  position: relative;
 }
-@media(max-width:620px){ .qv-img-wrap { border-radius: 16px 16px 0 0; } }
+@media(max-width:600px){ .qv-img-wrap { border-radius: 16px 16px 0 0; } }
 .qv-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
 .qv-info { padding: 28px; }
-.qv-name {
-  font-family: var(--ff-head);
-  font-size: 1.4rem;
-  line-height: 1.2;
-  margin-bottom: 8px;
-}
-.qv-info .rating-row { margin-bottom: 14px; }
-.qv-info .price-row { margin-bottom: 16px; margin-top: 0; }
-.qv-info .price-row .card-price { font-size: 1.3rem; }
-.qv-info .stock-badge { margin-bottom: 16px; }
-.qv-desc {
-  color: #555;
-  line-height: 1.65;
-  font-size: .9rem;
-  margin-bottom: 16px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
-html[data-theme="dark"] .qv-desc { color: #B8AF9F; }
-.qv-specs {
-  list-style: none;
-  margin: 0 0 20px;
-  padding: 0;
-  font-size: .83rem;
-  color: var(--muted);
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.qv-specs strong { color: var(--charcoal); font-weight: 600; }
+.qv-cat { font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--sage); font-weight: 600; margin-bottom: 6px; }
+.qv-name { font-family: var(--ff-head); font-size: 1.5rem; line-height: 1.2; margin-bottom: 10px; }
+.qv-rating { margin-bottom: 14px; }
+.qv-price-row { display: flex; align-items: baseline; gap: 10px; margin-bottom: 16px; }
+.qv-price { font-size: 1.5rem; font-weight: 700; color: var(--amber-dk); }
+.qv-desc { font-size: .88rem; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
+.qv-actions { display: flex; gap: 10px; }
+.qv-actions .btn-add-full { margin-bottom: 0; flex: 1; }
+.qv-actions .wish-btn { border: 1.5px solid var(--border); background: var(--bg); }
 .qv-view-full {
   display: block;
   text-align: center;
   font-size: .82rem;
-  font-weight: 600;
   color: var(--amber-dk);
-  margin-top: 4px;
+  font-weight: 600;
+  margin-top: 14px;
+  text-decoration: underline;
   cursor: pointer;
 }
-.qv-view-full:hover { text-decoration: underline; }
 
-/* ── Recently viewed ─────────────────────────────────────── */
-#recently-viewed-section { display: none; }
+/* Quick View trigger button on product card */
+.qv-trigger {
+  position: absolute; bottom: 10px; left: 10px;
+  background: rgba(26,26,26,.78);
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity var(--trans), transform var(--trans);
+}
+.product-card:hover .qv-trigger { opacity: 1; transform: translateY(0); }
+@media(max-width:900px){
+  /* No hover on touch devices — show it always so it's reachable */
+  .qv-trigger { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Recently Viewed ──────────────────────────────────────── */
+#recently-viewed-section {
+  padding: 0 5vw 56px;
+}
+#recently-viewed-section .related-title { margin-top: 0; }
+.rv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
 
 /* ── Toast (setup warnings + cart notifications) ─────────── */
 #setup-toast {
@@ -1215,9 +1224,7 @@ footer strong { color: var(--amber); }
     <a onclick="navigate('home')" href="#home">Shop</a>
     <a onclick="navigate('cart')" href="#cart">Cart</a>
     <button id="theme-toggle" onclick="toggleTheme()" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
-    <button id="wishlist-btn" onclick="navigate('wishlist')" title="Wishlist">
-      ❤️ <span id="wishlist-count"></span>
-    </button>
+    <button id="wishlist-btn" onclick="navigate('wishlist')" title="Wishlist" aria-label="Wishlist"><span id="wishlist-icon">♡</span><span id="wishlist-count"></span></button>
     <button id="cart-btn" onclick="navigate('cart')">
       🛒 Cart
       <span id="cart-count"></span>
@@ -1272,11 +1279,9 @@ footer strong { color: var(--amber); }
   </section>
 
   <!-- Recently Viewed -->
-  <section class="section" id="recently-viewed-section">
-    <div class="section-head">
-      <h2 class="section-title">🕒 Recently Viewed</h2>
-    </div>
-    <div class="related-grid" id="rv-grid-home"></div>
+  <section id="recently-viewed-section" style="display:none">
+    <h2 class="related-title">Recently Viewed</h2>
+    <div class="rv-grid" id="rv-grid"></div>
   </section>
 </div>
 
@@ -1292,10 +1297,15 @@ footer strong { color: var(--amber); }
       </div>
       <!-- Info -->
       <div class="product-info">
-        <p class="card-cat" id="pp-cat"></p>
-        <h1 class="product-name" id="pp-name"></h1>
+        <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px;">
+          <div>
+            <p class="card-cat" id="pp-cat"></p>
+            <h1 class="product-name" id="pp-name"></h1>
+          </div>
+          <button class="wish-btn" id="pp-wish-btn" onclick="toggleWishlist(currentPID, this)" aria-label="Add to wishlist">♡</button>
+        </div>
         <div class="rating-row" id="pp-rating"></div>
-        <div class="product-price price-row" id="pp-price"></div>
+        <p class="product-price" id="pp-price"></p>
         <div class="stock-badge" id="pp-stock"></div>
         <p class="product-desc" id="pp-desc"></p>
         <div id="pp-specs"></div>
@@ -1307,17 +1317,12 @@ footer strong { color: var(--amber); }
             <button id="qty-plus" onclick="changeQty(1)">+</button>
           </div>
         </div>
-        <div class="cta-row">
-          <button class="btn-add-full" id="btn-add-full" onclick="addCurrentToCart()">Add to Cart</button>
-          <button class="icon-btn wishlist-toggle" id="pp-wishlist-btn" data-pid="" onclick="toggleWishlist(currentPID)" title="Add to wishlist">🤍</button>
-        </div>
+        <button class="btn-add-full" id="btn-add-full" onclick="addCurrentToCart()">Add to Cart</button>
       </div>
     </div>
     <!-- Related -->
     <h2 class="related-title">You might also like</h2>
     <div class="related-grid" id="related-grid"></div>
-    <!-- Recently Viewed -->
-    <div id="pp-recently-viewed-wrap"></div>
   </div>
 </div>
 
@@ -1333,7 +1338,7 @@ footer strong { color: var(--amber); }
 <!-- ░░░░ WISHLIST PAGE ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
 <div id="wishlist-page" class="page">
   <div class="section">
-    <h1 class="section-title" style="margin-bottom:28px">❤️ Your Wishlist</h1>
+    <h1 class="section-title" style="margin-bottom:28px">Your Wishlist</h1>
     <div id="wishlist-items"></div>
   </div>
 </div>
@@ -1348,7 +1353,7 @@ footer strong { color: var(--amber); }
         <div id="checkout-banner" class="checkout-banner"></div>
         <div class="form-group">
           <label>Full Name *</label>
-          <input type="text" id="f-name" placeholder="Cristiano Ronaldo" required />
+          <input type="text" id="f-name" placeholder="Your Name" required />
           <p class="form-error" id="err-name">Please enter your name.</p>
         </div>
         <div class="form-group">
@@ -1402,34 +1407,27 @@ footer strong { color: var(--amber); }
 </div>
 
 <!-- ░░░░ QUICK VIEW MODAL ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ -->
-<div id="quickview-modal" onclick="if(event.target===this) closeQuickView()">
+<div id="quickview-overlay" onclick="if(event.target===this) closeQuickView()">
   <div class="qv-box">
     <button class="qv-close" onclick="closeQuickView()" aria-label="Close quick view">✕</button>
     <div class="qv-layout">
       <div class="qv-img-wrap">
-        <img id="qv-img" src="" alt="" onerror="this.onerror=null;this.src=svgPlaceholder();" />
+        <img id="qv-img" src="" alt="" onerror="this.onerror=null;this.src=svgPlaceholder()" />
       </div>
       <div class="qv-info">
-        <p class="card-cat" id="qv-cat"></p>
+        <p class="qv-cat" id="qv-cat"></p>
         <h2 class="qv-name" id="qv-name"></h2>
-        <div class="rating-row" id="qv-rating"></div>
-        <div class="price-row" id="qv-price"></div>
-        <div class="stock-badge" id="qv-stock"></div>
+        <div class="rating-row qv-rating" id="qv-rating"></div>
+        <div class="qv-price-row">
+          <span class="qv-price" id="qv-price"></span>
+          <span class="price-original" id="qv-price-original"></span>
+        </div>
         <p class="qv-desc" id="qv-desc"></p>
-        <ul class="qv-specs" id="qv-specs"></ul>
-        <div class="qty-row">
-          <span class="qty-label">Qty</span>
-          <div class="qty-ctrl">
-            <button id="qv-qty-minus" onclick="changeQVQty(-1)">−</button>
-            <span id="qv-qty-display">1</span>
-            <button id="qv-qty-plus" onclick="changeQVQty(1)">+</button>
-          </div>
+        <div class="qv-actions">
+          <button class="btn-add-full" id="qv-add-btn" onclick="quickAddToCart()">Add to Cart</button>
+          <button class="wish-btn" id="qv-wish-btn" onclick="toggleWishlist(qvCurrentPID, this)" aria-label="Add to wishlist">♡</button>
         </div>
-        <div class="cta-row">
-          <button class="btn-add-full" id="qv-btn-add" onclick="addQVToCart()">Add to Cart</button>
-          <button class="icon-btn wishlist-toggle" id="qv-wishlist-btn" data-pid="" onclick="toggleWishlist(currentQVPID)" title="Add to wishlist" aria-label="Toggle wishlist">🤍</button>
-        </div>
-        <a class="qv-view-full" onclick="goToFullDetailsFromQV()">View full details →</a>
+        <span class="qv-view-full" onclick="openProduct(qvCurrentPID)">View full details →</span>
       </div>
     </div>
   </div>
@@ -1458,8 +1456,7 @@ let wishlist   = [];
 let recentlyViewed = [];
 let currentPID = null;
 let currentQty = 1;
-let currentQVPID = null;
-let qvQty = 1;
+let qvCurrentPID = null;
 let activeCategory = "All";
 let searchQuery = "";
 
@@ -1548,14 +1545,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Close Quick View on Escape so keyboard users aren't trapped in the modal
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    const qv = document.getElementById("quickview-modal");
-    if (qv.classList.contains("show")) closeQuickView();
-  }
-});
-
 window.addEventListener("hashchange", routeFromHash);
 
 function clearSearch() {
@@ -1629,10 +1618,10 @@ function navigate(page, push=true) {
   document.querySelectorAll(".page").forEach(p => p.classList.remove("active"));
   document.getElementById(page + "-page").classList.add("active");
   window.scrollTo(0, 0);
-  if (page === "cart")     { renderCart(); if(push) history.pushState(null,"","#cart"); }
-  if (page === "wishlist") { renderWishlistPage(); if(push) history.pushState(null,"","#wishlist"); }
-  if (page === "checkout") { renderCheckout(); if(push) history.pushState(null,"","#checkout"); }
-  if (page === "home")     { renderGrid(currentFilteredProducts()); renderRecentlyViewed(); if(push) history.pushState(null,"","#home"); }
+  if (page === "cart")      { renderCart(); if(push) history.pushState(null,"","#cart"); }
+  if (page === "wishlist")  { renderWishlist(); if(push) history.pushState(null,"","#wishlist"); }
+  if (page === "checkout")  { renderCheckout(); if(push) history.pushState(null,"","#checkout"); }
+  if (page === "home")      { currentPID = null; renderGrid(currentFilteredProducts()); renderRecentlyViewed(); if(push) history.pushState(null,"","#home"); }
 }
 
 function currentFilteredProducts() {
@@ -1672,6 +1661,7 @@ function filterProducts(cat, btn) {
 }
 
 /* ─── Star rating helper ─────────────────────────────────── */
+/* ─── Star rating helper ─────────────────────────────────── */
 function starsHTML(rating, count) {
   const pct = Math.max(0, Math.min(100, (rating / 5) * 100));
   return `
@@ -1684,42 +1674,145 @@ function starsHTML(rating, count) {
   `;
 }
 
-/* ─── Pricing / Sale badge helper ────────────────────────── */
-function isOnSale(p) {
-  return !!(p.originalPrice && p.originalPrice > p.price);
+/* ─── Wishlist ───────────────────────────────────────────── */
+function isWishlisted(id) {
+  return wishlist.includes(id);
 }
 
-function discountPct(p) {
-  return Math.round((1 - p.price / p.originalPrice) * 100);
-}
+function toggleWishlist(id, btn) {
+  const p = PRODUCTS.find(p => p.id === id);
+  if (!p) return;
 
-function priceRowHTML(p) {
-  let html = `<span class="card-price">${CONFIG.currency}${p.price.toLocaleString()}</span>`;
-  if (isOnSale(p)) {
-    html += `<span class="price-original">${CONFIG.currency}${p.originalPrice.toLocaleString()}</span>`;
-    html += `<span class="discount-pct">${discountPct(p)}% off</span>`;
+  const idx = wishlist.indexOf(id);
+  if (idx > -1) {
+    wishlist.splice(idx, 1);
+    showMiniToast(`Removed ${p.name} from wishlist`);
+  } else {
+    wishlist.push(id);
+    showMiniToast(`Added ${p.name} to wishlist ❤️`);
   }
-  return html;
+  saveWishlist();
+
+  // Sync every heart button currently on screen for this product (card +
+  // product page + quick view can all be visible/cached at once)
+  document.querySelectorAll(`[data-wish-id="${id}"]`).forEach(el => {
+    el.classList.toggle("active", wishlist.includes(id));
+    el.textContent = wishlist.includes(id) ? "❤" : "♡";
+  });
+  if (btn) {
+    btn.classList.toggle("active", wishlist.includes(id));
+    btn.textContent = wishlist.includes(id) ? "❤" : "♡";
+  }
+
+  // If we're currently viewing the wishlist page, re-render it immediately
+  if (document.getElementById("wishlist-page").classList.contains("active")) {
+    renderWishlist();
+  }
 }
 
-/* ─── Product Specs helpers ──────────────────────────────── */
-function specsTableHTML(p) {
-  if (!p.specs) return "";
-  const rows = Object.entries(p.specs).map(([k, v]) =>
-    `<div class="spec-row"><span class="spec-key">${k}</span><span class="spec-val">${v}</span></div>`
-  ).join("");
+function saveWishlist() {
+  if (storageAvailable) {
+    try { localStorage.setItem("my_wishlist", JSON.stringify(wishlist)); } catch (e) {}
+  }
+  updateWishlistBadge();
+}
+
+function updateWishlistBadge() {
+  const icon = document.getElementById("wishlist-icon");
+  const badge = document.getElementById("wishlist-count");
+  const btn = document.getElementById("wishlist-btn");
+  const hasItems = wishlist.length > 0;
+
+  icon.textContent = hasItems ? "❤" : "♡";
+  badge.textContent = wishlist.length;
+  badge.classList.toggle("visible", hasItems);
+  btn.classList.toggle("has-items", hasItems);
+}
+
+function renderWishlist() {
+  const wrap = document.getElementById("wishlist-items");
+  const items = wishlist.map(id => PRODUCTS.find(p => p.id === id)).filter(Boolean);
+
+  if (items.length === 0) {
+    wrap.innerHTML = `
+      <div class="wishlist-empty">
+        <div style="font-size:3rem;margin-bottom:12px">🤍</div>
+        <h2>Your wishlist is empty</h2>
+        <p>Tap the heart on anything you love to save it here.</p>
+        <br/>
+        <button class="btn-primary" style="display:inline-block;margin-top:8px" onclick="navigate('home')">Browse Shop</button>
+      </div>`;
+    return;
+  }
+
+  wrap.innerHTML = `<div class="wishlist-grid">${items.map(p => productCard(p)).join("")}</div>`;
+}
+
+/* ─── Sale price helper ──────────────────────────────────── */
+function priceHTML(p) {
+  const onSale = p.originalPrice && p.originalPrice > p.price;
+  if (!onSale) {
+    return `<p class="card-price">${CONFIG.currency}${p.price.toLocaleString()}</p>`;
+  }
+  const pct = Math.round((1 - p.price / p.originalPrice) * 100);
   return `
-    <div class="specs-block">
-      <h3 class="specs-title">📦 Specifications</h3>
-      <div class="specs-table">${rows}</div>
+    <div class="price-row">
+      <p class="card-price" style="margin:0">${CONFIG.currency}${p.price.toLocaleString()}</p>
+      <span class="price-original">${CONFIG.currency}${p.originalPrice.toLocaleString()}</span>
+      <span class="price-discount-pct">${pct}% OFF</span>
     </div>`;
 }
 
-function specsListHTML(p, limit) {
-  if (!p.specs) return "";
-  const entries = Object.entries(p.specs).slice(0, limit || 100);
-  return entries.map(([k, v]) => `<li><strong>${k}:</strong> ${v}</li>`).join("");
+function saleBadgeHTML(p) {
+  const onSale = p.originalPrice && p.originalPrice > p.price;
+  if (!onSale) return "";
+  const pct = Math.round((1 - p.price / p.originalPrice) * 100);
+  return `<span class="sale-badge">🔥 ${pct}% OFF</span>`;
 }
+
+/* ─── Specs table ────────────────────────────────────────── */
+function specsHTML(specs) {
+  if (!specs || Object.keys(specs).length === 0) return "";
+  const rows = Object.entries(specs).map(([k, v]) =>
+    `<div class="specs-row"><span class="spec-key">${k}</span><span class="spec-val">${v}</span></div>`
+  ).join("");
+  return `
+    <p class="specs-table-title">Specifications</p>
+    <div class="specs-table">${rows}</div>`;
+}
+
+/* ─── Recently Viewed ─────────────────────────────────────── */
+function trackRecentlyViewed(id) {
+  recentlyViewed = recentlyViewed.filter(pid => pid !== id);
+  recentlyViewed.unshift(id);
+  recentlyViewed = recentlyViewed.slice(0, 8); // cap history so it doesn't grow forever
+  if (storageAvailable) {
+    try { localStorage.setItem("bf_recently_viewed", JSON.stringify(recentlyViewed)); } catch (e) {}
+  }
+}
+
+function renderRecentlyViewed() {
+  const section = document.getElementById("recently-viewed-section");
+  const grid = document.getElementById("rv-grid");
+
+  // Show everything in the viewing history, most recent first — this runs
+  // on the home page, so there's no "current product" to exclude here
+  // (that exclusion only makes sense inside the product page's own
+  // "related products" list, which is handled separately in openProduct).
+  const items = recentlyViewed
+    .map(id => PRODUCTS.find(p => p.id === id))
+    .filter(Boolean)
+    .slice(0, 4);
+
+  if (items.length === 0) {
+    section.style.display = "none";
+    return;
+  }
+  section.style.display = "block";
+  grid.innerHTML = items.map(p => productCard(p)).join("");
+}
+
+
 
 /* ─── Product Grid ───────────────────────────────────────── */
 function renderGrid(products) {
@@ -1750,31 +1843,24 @@ function escapeHtml(str) {
 }
 
 function productCard(p) {
-  const inCart     = cart.some(c => c.id === p.id);
-  const inWishlist = wishlist.includes(p.id);
+  const inCart    = cart.some(c => c.id === p.id);
   const outOfStock = p.stock <= 0;
-  const onSale     = isOnSale(p);
+  const wished    = isWishlisted(p.id);
   return `
   <div class="product-card" onclick="openProduct(${p.id})">
     <div class="card-img-wrap">
       <img src="${p.images[0]}" alt="${p.name}" loading="lazy" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect width=%22300%22 height=%22400%22 fill=%22%23E2DBCF%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22sans-serif%22 font-size=%2214%22 fill=%22%238A8278%22 text-anchor=%22middle%22%3EImage unavailable%3C/text%3E%3C/svg%3E'" />
-      <div class="card-badges-top">
-        <span class="card-badge">${p.category}</span>
-        ${onSale ? `<span class="sale-badge">🔥 ${discountPct(p)}% OFF</span>` : ""}
-        ${outOfStock ? `<span class="stock-out-badge">Sold Out</span>` : ""}
-      </div>
-      <div class="card-icon-actions">
-        <button class="icon-btn wishlist-toggle ${inWishlist?'active':''}" data-pid="${p.id}"
-          onclick="event.stopPropagation(); toggleWishlist(${p.id})"
-          title="${inWishlist ? 'Remove from wishlist' : 'Add to wishlist'}" aria-label="Toggle wishlist">${inWishlist ? '❤️' : '🤍'}</button>
-        <button class="icon-btn quickview-btn" onclick="event.stopPropagation(); openQuickView(${p.id})" title="Quick view" aria-label="Quick view">👀</button>
-      </div>
+      <span class="card-badge">${p.category}</span>
+      ${outOfStock ? `<span class="stock-out-badge">Sold Out</span>` : saleBadgeHTML(p)}
+      <button class="wish-btn ${wished ? 'active' : ''}" data-wish-id="${p.id}"
+        onclick="event.stopPropagation(); toggleWishlist(${p.id}, this)" aria-label="Toggle wishlist">${wished ? '❤' : '♡'}</button>
+      <span class="qv-trigger" onclick="event.stopPropagation(); openQuickView(${p.id})">Quick View</span>
     </div>
     <div class="card-body">
       <p class="card-cat">${p.category}</p>
       <h3 class="card-name">${p.name}</h3>
       <div class="rating-row">${starsHTML(p.rating || 0, p.reviewCount)}</div>
-      <div class="price-row">${priceRowHTML(p)}</div>
+      ${priceHTML(p)}
       <button class="btn-cart ${inCart?'in-cart':''}" ${outOfStock ? 'disabled' : ''}
         onclick="event.stopPropagation(); toggleCartFromCard(${p.id}, this)">
         ${outOfStock ? "Sold Out" : (inCart ? "In Cart ✓" : "Add to Cart")}
@@ -1817,9 +1903,24 @@ function openProduct(id) {
   document.getElementById("pp-cat").textContent   = p.category;
   document.getElementById("pp-name").textContent  = p.name;
   document.getElementById("pp-rating").innerHTML  = starsHTML(p.rating || 0, p.reviewCount);
-  document.getElementById("pp-price").innerHTML   = priceRowHTML(p);
   document.getElementById("pp-desc").textContent  = p.description;
-  document.getElementById("pp-specs").innerHTML   = specsTableHTML(p);
+  document.getElementById("pp-specs").innerHTML   = specsHTML(p.specs);
+
+  // Price (with strikethrough + % off when on sale)
+  const onSale = p.originalPrice && p.originalPrice > p.price;
+  const priceEl = document.getElementById("pp-price");
+  if (onSale) {
+    const pct = Math.round((1 - p.price / p.originalPrice) * 100);
+    priceEl.innerHTML = `${CONFIG.currency}${p.price.toLocaleString()} <span class="price-original" style="font-size:1rem;margin-left:8px">${CONFIG.currency}${p.originalPrice.toLocaleString()}</span> <span class="price-discount-pct" style="font-size:.8rem;vertical-align:middle">${pct}% OFF</span>`;
+  } else {
+    priceEl.textContent = CONFIG.currency + p.price.toLocaleString();
+  }
+
+  // Wishlist heart sync
+  const wishBtn = document.getElementById("pp-wish-btn");
+  wishBtn.setAttribute("data-wish-id", p.id);
+  wishBtn.classList.toggle("active", isWishlisted(p.id));
+  wishBtn.textContent = isWishlisted(p.id) ? "❤" : "♡";
 
   const stockEl = document.getElementById("pp-stock");
   const outOfStock = p.stock <= 0;
@@ -1846,9 +1947,7 @@ function openProduct(id) {
   rg.innerHTML = related.length ? related.map(r => productCard(r)).join("") : "<p style='color:var(--muted)'>No related products found.</p>";
 
   updateAddButton();
-  pushRecentlyViewed(id);
-  document.getElementById("pp-recently-viewed-wrap").innerHTML = buildRecentlyViewedHTML(p.id);
-  syncWishlistButtons();
+  trackRecentlyViewed(id);
   navigate("product", false);
   history.pushState(null, "", "#product-" + id);
 }
@@ -1856,6 +1955,74 @@ function openProduct(id) {
 function svgPlaceholder() {
   return "data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22300%22 height=%22400%22%3E%3Crect width=%22300%22 height=%22400%22 fill=%22%23E2DBCF%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 font-family=%22sans-serif%22 font-size=%2214%22 fill=%22%238A8278%22 text-anchor=%22middle%22%3EImage unavailable%3C/text%3E%3C/svg%3E";
 }
+
+/* ─── Quick View modal ───────────────────────────────────── */
+function openQuickView(id) {
+  const p = PRODUCTS.find(p => p.id === id);
+  if (!p) return;
+  qvCurrentPID = id;
+
+  document.getElementById("qv-img").src = p.images[0];
+  document.getElementById("qv-img").alt = p.name;
+  document.getElementById("qv-cat").textContent = p.category;
+  document.getElementById("qv-name").textContent = p.name;
+  document.getElementById("qv-rating").innerHTML = starsHTML(p.rating || 0, p.reviewCount);
+  document.getElementById("qv-desc").textContent = p.description;
+
+  const onSale = p.originalPrice && p.originalPrice > p.price;
+  document.getElementById("qv-price").textContent = CONFIG.currency + p.price.toLocaleString();
+  document.getElementById("qv-price-original").textContent = onSale ? (CONFIG.currency + p.originalPrice.toLocaleString()) : "";
+
+  const wishBtn = document.getElementById("qv-wish-btn");
+  wishBtn.setAttribute("data-wish-id", p.id);
+  wishBtn.classList.toggle("active", isWishlisted(p.id));
+  wishBtn.textContent = isWishlisted(p.id) ? "❤" : "♡";
+
+  const addBtn = document.getElementById("qv-add-btn");
+  const outOfStock = p.stock <= 0;
+  const inCart = cart.some(c => c.id === p.id);
+  addBtn.disabled = outOfStock;
+  addBtn.textContent = outOfStock ? "Out of Stock" : (inCart ? "In Cart ✓" : "Add to Cart");
+  addBtn.classList.toggle("in-cart", inCart && !outOfStock);
+
+  document.getElementById("quickview-overlay").classList.add("show");
+  document.body.style.overflow = "hidden";
+}
+
+function closeQuickView() {
+  document.getElementById("quickview-overlay").classList.remove("show");
+  document.body.style.overflow = "";
+}
+
+function quickAddToCart() {
+  const p = PRODUCTS.find(p => p.id === qvCurrentPID);
+  if (!p || p.stock <= 0) return;
+
+  const existing = cart.find(c => c.id === p.id);
+  if (existing) {
+    existing.qty = Math.min(p.stock, existing.qty + 1);
+  } else {
+    cart.push({ id: p.id, qty: 1 });
+  }
+  saveCart();
+  showMiniToast(`Added ${p.name} to cart`);
+
+  const addBtn = document.getElementById("qv-add-btn");
+  addBtn.textContent = "In Cart ✓";
+  addBtn.classList.add("in-cart");
+
+  // Keep card grids behind the modal in sync too
+  renderGrid(currentFilteredProducts());
+}
+
+// Escape key closes the Quick View modal, matching standard modal UX
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && document.getElementById("quickview-overlay").classList.contains("show")) {
+    closeQuickView();
+  }
+});
+
+
 
 function setMainImg(el, src) {
   document.getElementById("gal-main").src = src;
@@ -1894,98 +2061,6 @@ function updateAddButton() {
   btn.disabled = outOfStock;
   btn.textContent = outOfStock ? "Out of Stock" : (inCart ? "In Cart ✓" : "Add to Cart");
   btn.classList.toggle("in-cart", inCart && !outOfStock);
-
-  const wBtn = document.getElementById("pp-wishlist-btn");
-  if (wBtn) {
-    wBtn.dataset.pid = currentPID;
-    const inWishlist = wishlist.includes(currentPID);
-    wBtn.classList.toggle("active", inWishlist);
-    wBtn.textContent = inWishlist ? "❤️" : "🤍";
-    wBtn.title = inWishlist ? "Remove from wishlist" : "Add to wishlist";
-  }
-}
-
-/* ─── Quick View ─────────────────────────────────────────── */
-function openQuickView(id) {
-  const p = PRODUCTS.find(p => p.id === id);
-  if (!p) return;
-
-  currentQVPID = id;
-  qvQty = 1;
-
-  const img = document.getElementById("qv-img");
-  img.src = p.images[0];
-  img.alt = p.name;
-
-  document.getElementById("qv-cat").textContent  = p.category;
-  document.getElementById("qv-name").textContent = p.name;
-  document.getElementById("qv-rating").innerHTML = starsHTML(p.rating || 0, p.reviewCount);
-  document.getElementById("qv-price").innerHTML  = priceRowHTML(p);
-  document.getElementById("qv-desc").textContent = p.description;
-  document.getElementById("qv-specs").innerHTML  = specsListHTML(p, 4);
-
-  const outOfStock = p.stock <= 0;
-  const stockEl = document.getElementById("qv-stock");
-  stockEl.textContent = outOfStock ? "Out of stock" : `${p.stock} in stock`;
-  stockEl.classList.toggle("out", outOfStock);
-
-  document.getElementById("qv-qty-display").textContent = outOfStock ? "0" : "1";
-  document.getElementById("qv-qty-minus").disabled = outOfStock;
-  document.getElementById("qv-qty-plus").disabled = outOfStock;
-
-  const wBtn = document.getElementById("qv-wishlist-btn");
-  wBtn.dataset.pid = id;
-
-  updateQVAddButton();
-  pushRecentlyViewed(id);
-  syncWishlistButtons();
-
-  document.getElementById("quickview-modal").classList.add("show");
-  document.body.style.overflow = "hidden";
-}
-
-function closeQuickView() {
-  document.getElementById("quickview-modal").classList.remove("show");
-  document.body.style.overflow = "";
-}
-
-function changeQVQty(delta) {
-  const p = PRODUCTS.find(p => p.id === currentQVPID);
-  if (!p || p.stock <= 0) return;
-  qvQty = Math.max(1, Math.min(p.stock, qvQty + delta));
-  document.getElementById("qv-qty-display").textContent = qvQty;
-}
-
-function addQVToCart() {
-  const p = PRODUCTS.find(p => p.id === currentQVPID);
-  if (!p || p.stock <= 0) return; // guard: never add out-of-stock items
-
-  const existing = cart.find(c => c.id === p.id);
-  if (existing) {
-    existing.qty = Math.min(p.stock, existing.qty + qvQty);
-  } else {
-    cart.push({ id: p.id, qty: qvQty });
-  }
-  saveCart();
-  updateQVAddButton();
-  showMiniToast(`Added ${p.name} to cart`);
-}
-
-function updateQVAddButton() {
-  const btn = document.getElementById("qv-btn-add");
-  const p = PRODUCTS.find(p => p.id === currentQVPID);
-  const outOfStock = !p || p.stock <= 0;
-  const inCart = cart.some(c => c.id === currentQVPID);
-
-  btn.disabled = outOfStock;
-  btn.textContent = outOfStock ? "Out of Stock" : (inCart ? "In Cart ✓" : "Add to Cart");
-  btn.classList.toggle("in-cart", inCart && !outOfStock);
-}
-
-function goToFullDetailsFromQV() {
-  const id = currentQVPID;
-  closeQuickView();
-  openProduct(id);
 }
 
 /* ─── Cart ───────────────────────────────────────────────── */
